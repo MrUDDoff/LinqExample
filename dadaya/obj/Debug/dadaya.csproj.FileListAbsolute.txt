@@ -1,0 +1,8 @@
+C:\Users\User\source\repos\dadaya\dadaya\bin\Debug\dadaya.exe.config
+C:\Users\User\source\repos\dadaya\dadaya\bin\Debug\dadaya.exe
+C:\Users\User\source\repos\dadaya\dadaya\bin\Debug\dadaya.pdb
+C:\Users\User\source\repos\dadaya\dadaya\obj\Debug\dadaya.csproj.AssemblyReference.cache
+C:\Users\User\source\repos\dadaya\dadaya\obj\Debug\dadaya.csproj.SuggestedBindingRedirects.cache
+C:\Users\User\source\repos\dadaya\dadaya\obj\Debug\dadaya.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\dadaya\dadaya\obj\Debug\dadaya.exe
+C:\Users\User\source\repos\dadaya\dadaya\obj\Debug\dadaya.pdb
