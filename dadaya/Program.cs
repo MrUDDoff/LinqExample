@@ -35,7 +35,8 @@ namespace dadaya
 
 
             //LinqBegin16
-            Console.WriteLine("LinqBegin16");
+            Console.WriteLine("Linq" + " " +
+                "Begin16");
             Console.WriteLine("");
             int[] mass = { 5, 7, 6, 2, -5, -4, -8 };
             var t = mass.Where(e => e > 0);
@@ -44,7 +45,8 @@ namespace dadaya
 
             //LinqBegin17
             Console.WriteLine("");
-            Console.WriteLine("LinqBegin17");
+            Console.WriteLine("Linq" + " " +
+                "Begin17");
             Console.WriteLine("");
             int[] mass1 = { 3, 5, 7, 6, 2, -5, -4, -8, 2, 10, 10, 7, 3};
             var d = mass1.Where(e => e % 2 != 0).Distinct();
@@ -53,7 +55,8 @@ namespace dadaya
 
             //LinqBegin18
             Console.WriteLine("");
-            Console.WriteLine("LinqBegin18");
+            Console.WriteLine("Linq" + " " +
+                "Begin18");
             Console.WriteLine("");
             int[] mass2 = { 5, 7, 6, 2, -5, -4, -8 };
             var h = mass2.Where(e => e % 2 == 0 && e < 0).Reverse();
@@ -71,6 +74,69 @@ namespace dadaya
             var g = mass3.Where(e => e > 0 && e % 10 == D).Reverse().Distinct().Reverse();
             try { foreach (var ga in g) Console.Write($"{ga} "); }
             catch { Console.WriteLine("Такого числа нет"); };
+
+            //LinqBegin20
+            Console.WriteLine("");
+            Console.WriteLine("Linq" + " " +
+                "Begin20");
+            Console.WriteLine("");
+            int[] mass4 = { 2, 3, 4, 0, -1, -8, 9, 1, 20, 10, -43, 12, 34, 333 };
+            var u = mass4.Where(x => x > 9 && x < 100).OrderBy(x => x);
+            foreach (var ua in u)
+                Console.WriteLine($"{ua} ");
+
+            //LinqBegin23
+            Console.WriteLine("");
+            Console.WriteLine("Linq" + " " +
+                "Begin23");
+            Console.WriteLine("");
+            int k = 2;
+            int[] mass5 = { 15, 2, 3, 4, 0, -1, -8, 9, 1, 20, 10, -43, 12, 34, 333 };
+            var q = mass5.Where((x, i) => i >= k && x % 2 != 0).OrderByDescending(x => x);
+            foreach (var qa in q)
+                Console.WriteLine($"{qa} ");
+
+            //LinqBegin24
+            Console.WriteLine("");
+            Console.WriteLine("Linq" + " " +
+                "Begin24");
+            Console.WriteLine("");
+            int kk = 4;
+            string[] mass6 = { "HFJGK67", "ERTB6", "hFG6FH", "5TGH5", "hJKFL", "H4J5K703" };
+            var pop = mass6.Where((x, i) => i < kk && Char.IsUpper(x[0]) && x.Length % 2 != 0).Reverse();
+            foreach (var popa in pop)
+                Console.WriteLine(popa);
+
+            //LinqBegin28
+            Console.WriteLine("");
+            Console.WriteLine("Linq" + " " +
+                "Begin28");
+            Console.WriteLine("");
+            int ll = 2;
+            string[] mass7 = { "HJ", "F1F", "GL1", "F55", "JTT", "31", "IOPSS" };
+            var lol = mass7.TakeWhile((x, i) => x.Length >= ll && Char.IsLetter(x[x.Length - 1])).OrderByDescending(x => x.Length).ThenBy(x => x);
+            foreach (var lola in lol)
+                Console.WriteLine(lola);
+
+            //LinqBegin33
+            Console.WriteLine("");
+            Console.WriteLine("Linq" + " " +
+                "Begin33");
+            Console.WriteLine("");
+            int[] mass8 = { -12, 34, 56, -78, 94 };
+            var iop = mass8.Where(x => x > 0).Select(x => x % 10).Distinct();
+            foreach (var iopa in iop)
+                Console.WriteLine(iopa);
+
+            //LinqBegin36
+            Console.WriteLine("");
+            Console.WriteLine("Linq" + " " +
+                "Begin36");
+            Console.WriteLine("");
+            string[] mass9 = { "NFJGK", "BRTI", "HFG6FG", "GGA", "AJKFL" };
+            var uouo = mass9.Select(x => x.Length % 2 == 0 ? x[x.Length - 1] : x[0]);
+            foreach (var uouoa in uouo)
+                Console.WriteLine(uouoa);
 
             //Что-то
             Console.WriteLine("");
@@ -148,6 +214,16 @@ namespace dadaya
             var result5 = AAAAAA.Select((x, i) => x * (i + 1)).Where(x => x > 9).Reverse();
             foreach(var rrr in result5)
                 Console.WriteLine(rrr);
+
+            //Что-то 8
+            Console.WriteLine("");
+            Console.WriteLine("Linq" + " " +
+                "Что-то 8");
+            Console.WriteLine("");
+            string[] AAAAAAA = { "HCAB", "CJLM", "AM", "XZ", "FTH", "HCABI", "CJLM2", "AM3", "XZ4", "FTH5" };
+            var result6 = AAAAAAA.OrderByDescending(x => x).Select((x, i) => (i+1) + " - " + x);
+            foreach (var rrrr in result6)
+                Console.WriteLine(rrrr);
 
             Console.ReadKey();
         }
