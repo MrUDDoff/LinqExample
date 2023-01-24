@@ -35,13 +35,13 @@ namespace dadaya
 
 
             //LinqBegin16
-            Console.WriteLine("Linq" + " " +
-                "Begin16");
-            Console.WriteLine("");
-            int[] mass = { 5, 7, 6, 2, -5, -4, -8 };
-            var t = mass.Where(e => e > 0);
-            foreach (var ta in t)
-                Console.Write($"{ta} ");
+            //Console.WriteLine("Linq" + " " +
+            //  "Begin16");
+            //Console.WriteLine("");
+            //int[] mass = { 5, 7, 6, 2, -5, -4, -8 };
+            //var t = mass.Where(e => e > 0);
+            //foreach (var ta in t)
+              //  Console.Write($"{ta} ");
 
             //LinqBegin17
             Console.WriteLine("");
@@ -64,16 +64,16 @@ namespace dadaya
                 Console.Write($"{ha} ");
 
             //LinqBegin19
-            Console.WriteLine("");
-            Console.WriteLine("Linq" + " " +
-                "Begin19");
-            Console.WriteLine("");
-            Console.WriteLine("Введите число");
-            int D = Int32.Parse(Console.ReadLine());
-            int[] mass3 = { 2, -234, 52, -34, 56, 67, 43, -32, 54, 23, 32, 45, 65, 2, 76 };
-            var g = mass3.Where(e => e > 0 && e % 10 == D).Reverse().Distinct().Reverse();
-            try { foreach (var ga in g) Console.Write($"{ga} "); }
-            catch { Console.WriteLine("Такого числа нет"); };
+            //Console.WriteLine("");
+            //Console.WriteLine("Linq" + " " +
+           //     "Begin19");
+           // Console.WriteLine("");
+          //  Console.WriteLine("Введите число");
+           // int D = Int32.Parse(Console.ReadLine());
+          //  int[] mass3 = { 2, -234, 52, -34, 56, 67, 43, -32, 54, 23, 32, 45, 65, 2, 76 };
+          //  var g = mass3.Where(e => e > 0 && e % 10 == D).Reverse().Distinct().Reverse();
+          //  try { foreach (var ga in g) Console.Write($"{ga} "); }
+          //  catch { Console.WriteLine("Такого числа нет"); };
 
             //LinqBegin20
             Console.WriteLine("");
@@ -137,6 +137,38 @@ namespace dadaya
             var uouo = mass9.Select(x => x.Length % 2 == 0 ? x[x.Length - 1] : x[0]);
             foreach (var uouoa in uouo)
                 Console.WriteLine(uouoa);
+
+            //LinqBegin38
+            Console.WriteLine("");
+            Console.WriteLine("Linq" + " " +
+                "Begin38");
+            Console.WriteLine("");
+            int[] mass10 = { 3, 6, 2, 5, 1, 4 };
+            var ii = mass10.Where((_, i) => (i + 1) % 3 != 0).Select((y, i) => i % 2 == 0 ? y * 2 : y);
+            foreach (var iii in ii)
+                Console.WriteLine(iii);
+
+            //LinqBegin39
+            Console.WriteLine("");
+            Console.WriteLine("Linq" + " " +
+                "Begin39");
+            Console.WriteLine("");
+            string[] mass11 = { "HAB4T", "MKS4IGT", "5QXW" };
+            var bb = mass11.SelectMany(x => x).Where(x => Char.IsDigit(x));
+            foreach (var bbk in bb)
+                Console.WriteLine(bbk);
+
+            //LinqBegin41
+            Console.WriteLine("");
+            Console.WriteLine("Linq" + " " +
+                "Begin41");
+            Console.WriteLine("");
+            var kkk = 3;
+            string[] mass12 = { "HAB4T.HMG.QA", "BFX3.7HO", "XTM.PK", "LOMI3.GXT" };
+            var tyu = mass12.SelectMany(x => x.Split('.')).Where(x => x.Length == kkk).OrderBy(x => x);
+            foreach (var tyua in tyu)
+                Console.WriteLine(tyua);
+
 
             //Что-то
             Console.WriteLine("");
@@ -227,5 +259,5 @@ namespace dadaya
 
             Console.ReadKey();
         }
-    }
+    }   
 }
